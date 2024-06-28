@@ -1,0 +1,7 @@
+tests/
+.venv/
+*.sqlite3
+__pycache__/
+.env
+.coverage
+htmlcov/
