@@ -7,13 +7,15 @@
 <div id="sidebar">
     {% block sidebar %}
         <ul>
-            <li><a href="/">Главная</a></li>
-            <li><a href="/articles/">Статьи</a></li>
+            <li><a href="{% url 'main' %}">Главная</a></li>
+            <li><a href="{% url 'articles' %}">Статьи</a></li>
         </ul>
     {% endblock %}
 </div>
 <div id="content">
+    <div class="container-fluid">
     {% block content %}{% endblock %}
+    </div>
 </div>
 </body>
 </html>
