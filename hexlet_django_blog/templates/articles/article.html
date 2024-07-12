@@ -5,4 +5,10 @@
 {% block content %}
 <h3>{{ article.name }}</h3>
 <p>{{ article.body }}</p>
+<br>
+<a href="{% url 'articles_update' article.id %}">Редактировать</a>
+<form action="{% url 'articles_delete' article.id %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Удалить">
+</form>
 {% endblock %}

@@ -12,6 +12,7 @@
     </ul>
 </div>
 {% endif %}
+{% block form %}
 <form action="{% url 'articles_create' %}" method="post">
     {% csrf_token %}
     <table border="1">
@@ -19,4 +20,5 @@
     </table>
     <input type="submit" value="Создать">
 </form>
+{% endblock %}
 {% endblock %}
